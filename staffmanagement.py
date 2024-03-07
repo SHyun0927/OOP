@@ -1,4 +1,6 @@
 class staff:
+    number_of_staffs = 0
+    retirement_age = 65
     def __init__(self, name, age, employee_id, dob, title):
         self.name = name
         self.age = age
@@ -6,12 +8,22 @@ class staff:
         self.dob = dob
         self.title = title
 
+        staff.num_of_staffs
+
+
     def print_details(self):
         print("Name: ", self.name)
         print("Age: ", self.age)
         print("Employee ID: ", self.employee_id)
         print("Date of Birth: ", self.dob)
         print("Title: ", self.title)
+
+    def num_of_staffs(self):
+        staff.number_of_staffs += 1
+
+    def total_staffs(self):
+        return staff.num_of_staffs
+
 
 class management(staff):
     def __init__(self, name, age, employee_id, dob, title, car):
